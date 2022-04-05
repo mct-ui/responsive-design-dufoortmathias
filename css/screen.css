@@ -369,6 +369,26 @@ a:focus {
   color: #5051db;
 }
 
+/*
+    Component: Logo
+    ---
+    Website main logo
+*/
+
+.c-logo {
+  height: 32px;
+}
+
+.c-logo__symbol {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .c-logo {
+    max-height: 40px;
+  }
+}
+
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
