@@ -5,22 +5,15 @@
 @font-face {
   font-family: "HK Grotesk Web";
   font-weight: 200;
-  src: url("../fonts/hkgrotesk-light-webfont.woff2") format("woff2"),
-    url("../fonts/hkgrotesk-light-webfont.woff") format("woff");
+  src: url("../fonts/hkgrotesk-light-webfont.woff") format("woff"),
+    url("../fonts/hkgrotesk-light-webfont.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "HK Grotesk Web";
   font-weight: 400;
-  src: url("../fonts/hkgrotesk-regular-webfont.woff2") format("woff2"),
-    url("../fonts/hkgrotesk-regular-webfont.woff") format("woff");
-}
-
-@font-face {
-  font-family: "HK Grotesk Web";
-  font-weight: 600;
-  src: url("../fonts/hkgrotesk-medium-webfont.woff2") format("woff2"),
-    url("../fonts/hkgrotesk-medium-webfont.woff") format("woff");
+  src: url("../fonts/hkgrotesk-regular-webfont.woff") format("woff"),
+    url("../fonts/hkgrotesk-regular-webfont.woff2") format("woff2");
 }
 
 /*------------------------------------*\
@@ -168,19 +161,16 @@ hr {
   margin: 0 0 24px;
 }
 
-a {
-  color: RoyalBlue;
+a,
+a:visited {
+  color: #5051db;
   transition: all 0.1s ease-in-out;
 }
 
-a:visited,
-a:active {
-  color: BlueViolet;
-}
-
+a:active,
 a:hover,
 a:focus {
-  color: Crimson;
+  color: #3e3ea8;
 }
 
 /*------------------------------------*\
@@ -247,17 +237,6 @@ a:focus {
 
 .o-layout__item {
   flex-basis: 100%;
-}
-
-/*
-    Objects: List
-    ---
-    Small reusable object to remove default list styling from lists
-*/
-
-.o-list {
-  list-style: none;
-  padding: 0;
 }
 
 /* gutter modifiers, these affect o-layout__item too */
@@ -358,9 +337,21 @@ a:focus {
   align-content: space-between;
 }
 
+/*
+    Objects: List
+    ---
+    Small reusable object to remove default list styling from lists
+*/
+
+.o-list-reset {
+  list-style: none;
+  padding: 0;
+}
+
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+
 /*
     Component: header
     ---
@@ -380,6 +371,26 @@ a:focus {
 
   .c-header__nav {
     display: block;
+  }
+}
+
+/*
+    Component: Logo
+    ---
+    Website main logo
+*/
+
+.c-logo {
+  height: 32px;
+}
+
+.c-logo__svg {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .c-logo {
+    height: 40px;
   }
 }
 
@@ -426,26 +437,6 @@ a:focus {
   .c-nav__list {
     display: flex;
     gap: 32px;
-  }
-}
-
-/*
-    Component: Logo
-    ---
-    Website main logo
-*/
-
-.c-logo {
-  height: 32px;
-}
-
-.c-logo__symbol {
-  height: 100%;
-}
-
-@media (min-width: 768px) {
-  .c-logo {
-    max-height: 40px;
   }
 }
 
